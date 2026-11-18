@@ -13,6 +13,6 @@ jobs:
         run: docker run --rm -v "$PWD:/tap:ro" homebrew/brew:latest brew style /tap/Formula/harness.rb
       - name: Verify public macOS archive
         run: |
-          curl -fL --retry 3 -o harness.tar.gz https://github.com/bhumirath/ai-harness-cli-project/releases/download/v0.2.0/harness-0.2.0-darwin-arm64.tar.gz
-          echo "6402cc26ee36e6db64ced93da0b2a15332ae91c0d3ec98454bac76ce8a7538ce  harness.tar.gz" | sha256sum -c -
-          tar -tzf harness.tar.gz | grep -Fx harness-0.2.0-darwin-arm64
+          curl -fL --retry 3 -o harness.tar.gz https://github.com/bhumirath/ai-harness-cli-project/releases/download/v0.2.1/harness-0.2.1-darwin-arm64.tar.gz
+          echo "1d9fdb944a7bbb67e13a36e9ca77a53e5fa8dc88f22aabbda3a91ccb520db62a  harness.tar.gz" | sha256sum -c -
+          tar -tzf harness.tar.gz | grep -Fx harness-0.2.1-darwin-arm64
