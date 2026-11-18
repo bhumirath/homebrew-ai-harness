@@ -5,8 +5,8 @@ class Harness < Formula
   sha256 "6402cc26ee36e6db64ced93da0b2a15332ae91c0d3ec98454bac76ce8a7538ce"
   license :cannot_represent
 
-  depends_on :macos
   depends_on arch: :arm64
+  depends_on :macos
 
   def install
     bin.install "harness-0.2.0-darwin-arm64" => "harness"
