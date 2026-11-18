@@ -1,0 +1,14 @@
+name: Test formula
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  formula:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - run: brew install --formula ./Formula/harness.rb
+      - run: harness --version
+      - run: brew test harness
